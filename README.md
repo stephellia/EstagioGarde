@@ -53,10 +53,10 @@ EstagioGarde/
    cp .env.example .env
    ```
 
-3. Rode as migrations do Prisma (isso cria o banco SQLite e a tabela `Appointment`):
+3. Rode as migrations do Prisma:
 
    ```bash
-   npx prisma migrate dev --name init
+   npx prisma migrate deploy
    ```
 
 4. Suba o servidor em modo desenvolvimento (reinicia sozinho ao salvar arquivos):
