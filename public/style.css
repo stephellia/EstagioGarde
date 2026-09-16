@@ -1,0 +1,114 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f4f6f8;
+  color: #2b2d33;
+  margin: 0;
+  padding: 24px 16px;
+}
+
+.container {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+header h1 {
+  margin-bottom: 4px;
+}
+
+header p {
+  color: #6b7280;
+  margin-top: 0;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.card h2 {
+  margin-top: 0;
+  font-size: 1.1rem;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+input[type="date"],
+input[type="text"] {
+  flex: 1;
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+
+.row {
+  display: flex;
+  gap: 8px;
+}
+
+.row.space-between {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.slots {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.slot-btn {
+  background: #e5edff;
+  color: #1d4ed8;
+}
+
+.slot-btn:hover {
+  background: #c7d9ff;
+}
+
+.message {
+  min-height: 20px;
+  color: #dc2626;
+  font-weight: 500;
+}
+
+ul#appointmentsList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul#appointmentsList li {
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+ul#appointmentsList li:last-child {
+  border-bottom: none;
+}

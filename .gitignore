@@ -1,0 +1,26 @@
+# Dependências
+node_modules/
+ 
+# Variáveis de ambiente 
+.env
+ 
+# Client do Prisma gerado automaticamente 
+generated/
+src/generated/
+ 
+# Banco de dados local 
+*.db
+*.db-journal
+ 
+# Configs de ferramentas de IA que o Prisma instala sozinho
+.claude/
+.agents/
+.windsurf/
+skills-lock.json
+ 
+# Logs
+npm-debug.log*
+ 
+# Arquivos de sistema
+.DS_Store
+Thumbs.db

@@ -1,0 +1,24 @@
+
+// Documentação: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+
+model Appointment {
+  id         Int      @id @default(autoincrement())
+  clientName String
+  date       String // formato "YYYY-MM-DD"
+  time       String // formato "HH:mm"
+  createdAt  DateTime @default(now())
+
+
+  @@unique([date, time])
+}

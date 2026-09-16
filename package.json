@@ -1,0 +1,30 @@
+{
+  "name": "estagiogarde",
+  "version": "1.0.0",
+  "description": "Projeto corresponde ao desafio Full Stack - Estágio",
+  "main": "src/server.js",
+  "scripts": {
+    "dev": "nodemon src/server.js",
+    "start": "node src/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stephellia/EstagioGarde.git"
+  },
+  "keywords": [],
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/stephellia/EstagioGarde/issues"
+  },
+  "homepage": "https://github.com/stephellia/EstagioGarde#readme",
+  "dependencies": {
+    "@prisma/client": "^6.19.3",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14",
+    "prisma": "^6.19.3"
+  }
+}

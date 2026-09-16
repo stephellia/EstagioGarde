@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agendamento de Consultas</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🗓️ Agendamento de Consultas</h1>
+      <p>Escolha uma data e um horário disponível para marcar sua consulta.</p>
+    </header>
+
+    <section class="card">
+      <label for="date">Data da consulta:</label>
+      <div class="row">
+        <input type="date" id="date" />
+        <button id="searchBtn">Buscar horários</button>
+      </div>
+      <p id="dateMessage" class="message"></p>
+    </section>
+
+    <section class="card" id="slotsSection" hidden>
+      <h2>Horários disponíveis</h2>
+      <div id="slotsList" class="slots"></div>
+    </section>
+
+    <section class="card" id="formSection" hidden>
+      <h2>Confirmar agendamento</h2>
+      <p>
+        Data: <strong id="selectedDate"></strong> — Horário:
+        <strong id="selectedTime"></strong>
+      </p>
+      <label for="clientName">Seu nome:</label>
+      <div class="row">
+        <input type="text" id="clientName" placeholder="Digite seu nome" />
+        <button id="confirmBtn">Confirmar</button>
+      </div>
+      <p id="confirmMessage" class="message"></p>
+    </section>
+
+    <section class="card">
+      <div class="row space-between">
+        <h2>Agendamentos realizados</h2>
+        <button id="refreshBtn">Atualizar</button>
+      </div>
+      <ul id="appointmentsList"></ul>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
