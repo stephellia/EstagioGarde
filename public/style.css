@@ -1,114 +1,647 @@
+/* =========================
+   RESET
+========================= */
+
 * {
   box-sizing: border-box;
 }
 
-body {
-  font-family: "Segoe UI", Arial, sans-serif;
-  background: #f4f6f8;
-  color: #2b2d33;
-  margin: 0;
-  padding: 24px 16px;
+html {
+  scroll-behavior: smooth;
 }
 
+body {
+  margin: 0;
+  min-height: 100vh;
+
+  font-family: "Segoe UI", Arial, sans-serif;
+
+  background:
+    radial-gradient(
+      circle at 15% 10%,
+      rgba(0, 174, 239, 0.14),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 85% 20%,
+      rgba(34, 211, 238, 0.08),
+      transparent 28%
+    ),
+    #07111f;
+
+  color: #f8fafc;
+
+  padding: 40px 20px;
+}
+
+
+/* =========================
+   CONTAINER
+========================= */
+
 .container {
-  max-width: 640px;
+  width: 100%;
+  max-width: 900px;
+
   margin: 0 auto;
 }
 
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+  margin-bottom: 30px;
+}
+
+
+/* LOGO */
+
+.brand {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  margin-bottom: 55px;
+}
+
+.brand-icon {
+  width: 46px;
+  height: 46px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #00c6ff,
+      #2563eb
+    );
+
+  color: white;
+
+  font-size: 25px;
+  font-weight: 800;
+
+  box-shadow:
+    0 8px 30px rgba(0, 198, 255, 0.25);
+}
+
+.brand strong {
+  display: block;
+
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+
+.brand span {
+  display: block;
+
+  margin-top: 2px;
+
+  font-size: 9px;
+
+  color: #7dd3fc;
+
+  letter-spacing: 1.5px;
+}
+
+
+/* HERO */
+
+.hero-content {
+  max-width: 700px;
+}
+
+.badge {
+  display: inline-block;
+
+  padding: 7px 12px;
+
+  margin-bottom: 16px;
+
+  border: 1px solid rgba(56, 189, 248, 0.3);
+
+  border-radius: 50px;
+
+  background: rgba(14, 165, 233, 0.08);
+
+  color: #38bdf8;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+}
+
 header h1 {
-  margin-bottom: 4px;
+  margin: 0;
+
+  font-size: clamp(2.2rem, 6vw, 4rem);
+
+  line-height: 1.05;
+
+  letter-spacing: -2px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #ffffff,
+      #8be9ff
+    );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 header p {
-  color: #6b7280;
-  margin-top: 0;
+  max-width: 600px;
+
+  margin-top: 22px;
+
+  color: #94a3b8;
+
+  font-size: 1.05rem;
+
+  line-height: 1.7;
 }
+
+
+/* =========================
+   CARDS
+========================= */
 
 .card {
-  background: #ffffff;
-  border-radius: 12px;
-  padding: 20px;
+  position: relative;
+
   margin-bottom: 20px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+
+  padding: 28px;
+
+  border: 1px solid rgba(148, 163, 184, 0.12);
+
+  border-radius: 20px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(15, 32, 52, 0.95),
+      rgba(8, 20, 35, 0.95)
+    );
+
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.25);
+
+  backdrop-filter: blur(12px);
 }
 
-.card h2 {
-  margin-top: 0;
-  font-size: 1.1rem;
+
+/* Linha luminosa no topo */
+
+.card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 25px;
+  right: 25px;
+
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(56, 189, 248, 0.6),
+      transparent
+    );
 }
+
+
+/* =========================
+   TÍTULOS
+========================= */
+
+.section-title {
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+
+  margin-bottom: 24px;
+}
+
+.section-title h2 {
+  margin: 0;
+
+  font-size: 1.15rem;
+
+  color: #f8fafc;
+}
+
+.section-title p {
+  margin: 5px 0 0;
+
+  color: #64748b;
+
+  font-size: 0.85rem;
+}
+
+.icon-box {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border: 1px solid rgba(56, 189, 248, 0.18);
+
+  border-radius: 12px;
+
+  background: rgba(14, 165, 233, 0.08);
+
+  font-size: 18px;
+}
+
+
+/* =========================
+   LABEL
+========================= */
 
 label {
   display: block;
+
+  margin-bottom: 9px;
+
+  color: #cbd5e1;
+
+  font-size: 0.85rem;
+
   font-weight: 600;
-  margin-bottom: 8px;
 }
+
+
+/* =========================
+   INPUTS
+========================= */
 
 input[type="date"],
 input[type="text"] {
+  width: 100%;
+
   flex: 1;
-  padding: 10px 12px;
-  border: 1px solid #d1d5db;
-  border-radius: 8px;
-  font-size: 1rem;
+
+  padding: 13px 15px;
+
+  border: 1px solid #24364b;
+
+  border-radius: 11px;
+
+  outline: none;
+
+  background: #0a1728;
+
+  color: #f8fafc;
+
+  font-size: 0.95rem;
+
+  transition: 0.2s;
 }
 
-button {
-  padding: 10px 16px;
-  border: none;
-  border-radius: 8px;
-  background: #2563eb;
-  color: #fff;
-  font-size: 1rem;
-  cursor: pointer;
-  white-space: nowrap;
+input[type="date"]:focus,
+input[type="text"]:focus {
+  border-color: #22d3ee;
+
+  box-shadow:
+    0 0 0 3px rgba(34, 211, 238, 0.08);
 }
 
-button:hover {
-  background: #1d4ed8;
+input::placeholder {
+  color: #64748b;
 }
+
+
+/* =========================
+   ROW
+========================= */
 
 .row {
   display: flex;
-  gap: 8px;
+
+  gap: 10px;
 }
 
 .row.space-between {
   justify-content: space-between;
+
   align-items: center;
 }
 
+
+/* =========================
+   BOTÕES
+========================= */
+
+button {
+  padding: 13px 18px;
+
+  border: none;
+
+  border-radius: 11px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #06b6d4,
+      #2563eb
+    );
+
+  color: white;
+
+  font-size: 0.9rem;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  white-space: nowrap;
+
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s,
+    opacity 0.2s;
+}
+
+button:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 25px rgba(37, 99, 235, 0.25);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+
+/* Botão secundário */
+
+.secondary-btn {
+  background: rgba(14, 165, 233, 0.08);
+
+  border: 1px solid rgba(56, 189, 248, 0.2);
+
+  color: #7dd3fc;
+}
+
+.secondary-btn:hover {
+  background: rgba(14, 165, 233, 0.15);
+
+  box-shadow: none;
+}
+
+
+/* =========================
+   HORÁRIOS
+========================= */
+
 .slots {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fill, minmax(100px, 1fr));
+
+  gap: 10px;
 }
 
 .slot-btn {
-  background: #e5edff;
-  color: #1d4ed8;
+  padding: 12px;
+
+  border: 1px solid rgba(56, 189, 248, 0.18);
+
+  background:
+    rgba(14, 165, 233, 0.08);
+
+  color: #7dd3fc;
 }
 
 .slot-btn:hover {
-  background: #c7d9ff;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(6, 182, 212, 0.2),
+      rgba(37, 99, 235, 0.2)
+    );
+
+  border-color: #22d3ee;
+
+  box-shadow:
+    0 5px 20px rgba(34, 211, 238, 0.1);
 }
+
+
+/* =========================
+   DATA / HORÁRIO ESCOLHIDOS
+========================= */
+
+.selected-info {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 12px;
+
+  margin-bottom: 24px;
+}
+
+.selected-info > div {
+  padding: 15px;
+
+  border: 1px solid rgba(56, 189, 248, 0.12);
+
+  border-radius: 12px;
+
+  background: rgba(2, 132, 199, 0.06);
+}
+
+.selected-info span {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #64748b;
+
+  font-size: 0.7rem;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+}
+
+.selected-info strong {
+  color: #7dd3fc;
+
+  font-size: 1rem;
+}
+
+
+/* =========================
+   MENSAGENS
+========================= */
 
 .message {
   min-height: 20px;
-  color: #dc2626;
+
+  margin-bottom: 0;
+
+  color: #f87171;
+
+  font-size: 0.85rem;
+
   font-weight: 500;
 }
 
+
+/* =========================
+   LISTA DE AGENDAMENTOS
+========================= */
+
 ul#appointmentsList {
   list-style: none;
+
   padding: 0;
+
   margin: 0;
 }
 
 ul#appointmentsList li {
-  padding: 8px 0;
-  border-bottom: 1px solid #eee;
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 15px;
+
+  padding: 15px 0;
+
+  border-bottom: 1px solid rgba(148, 163, 184, 0.08);
+
+  color: #cbd5e1;
 }
 
 ul#appointmentsList li:last-child {
   border-bottom: none;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: 20px;
+
+  padding: 30px 5px 10px;
+
+  color: #475569;
+
+  font-size: 0.75rem;
+}
+
+.footer-brand strong {
+  display: block;
+
+  color: #94a3b8;
+
+  letter-spacing: 2px;
+}
+
+.footer-brand span {
+  color: #475569;
+}
+
+footer p {
+  margin: 0;
+
+  text-align: right;
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 600px) {
+
+  body {
+    padding: 25px 14px;
+  }
+
+  .brand {
+    margin-bottom: 40px;
+  }
+
+  header h1 {
+    font-size: 2.3rem;
+
+    letter-spacing: -1px;
+  }
+
+  header p {
+    font-size: 0.95rem;
+  }
+
+  .card {
+    padding: 20px;
+
+    border-radius: 16px;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  .selected-info {
+    grid-template-columns: 1fr;
+  }
+
+  .row.space-between {
+    align-items: flex-start;
+  }
+
+  .row.space-between button {
+    width: auto;
+  }
+
+  footer {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  footer p {
+    text-align: left;
+  }
+
 }
